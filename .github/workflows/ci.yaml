@@ -9,5 +9,5 @@ jobs:
         with: 
           node-version: v16.17.1
       - run: npm install
-      - run: npx mocha app.test.js
+      - run: npx mocha app.test.js --exit
       - run: node app
