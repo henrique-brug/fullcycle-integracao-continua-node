@@ -1,0 +1,12 @@
+name: ci-node-workflow
+on: [push]
+jobs:
+  check-application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with: 
+          node-version: v16.17.1
+      - run: npx mocha app.test.js
+      - run: node app
